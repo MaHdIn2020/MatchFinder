@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router'; // <-- use react-router-dom here
+import { Link, useNavigate } from 'react-router'; 
 import useAuth from '../../hooks/useAuth';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import StickyBox from 'react-sticky-box'; // ✅ import sticky-box
+import StickyBox from 'react-sticky-box'; 
+import ThemeToggle from '../../components/ThemeToggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ const Navbar = () => {
 
   return (
     <StickyBox offsetTop={0} className="z-50"> {/* ✅ Sticky wrapper */}
-      <nav className="bg-white dark:bg-gray-900 text-black dark:text-white shadow-md py-4 px-6 md:px-10 lg:px-16">
+      <nav className="bg-card border-b border-primary shadow-sm">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-[#E82933]">
             MatchFinder
@@ -73,6 +74,7 @@ const Navbar = () => {
                 >
                   Dashboard
                 </Link>
+                            <ThemeToggle />
                 <button
                   className="bg-[#E82933] text-white px-4 py-2 rounded hover:bg-[#d11a24] transition"
                   onClick={handleSignOut}
@@ -121,11 +123,14 @@ const Navbar = () => {
               Home
             </Link>
             <Link to="/biodatas" className="block hover:text-[#E82933]">
-              Biodatas
+              About Us
             </Link>
             <Link to="/about" className="block hover:text-[#E82933]">
               About Us
             </Link>
+            <div className="flex justify-center">
+              <ThemeToggle />
+            </div>
             <Link to={dashboardLink} className="block hover:text-[#E82933]">
               Dashboard
             </Link>
