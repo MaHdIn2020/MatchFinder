@@ -21,10 +21,7 @@
     "react-icons": "^5.5.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router": "^7.6.3",
-<<<<<<< HEAD
     "react-sticky-box": "^2.0.5",
-=======
->>>>>>> 16fea395c3f848585e203e55a05799adf73b0755
     "react-toastify": "^11.0.5",
     "sweetalert": "^2.1.2",
     "tailwindcss": "^4.1.11"
