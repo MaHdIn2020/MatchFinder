@@ -6,6 +6,7 @@ import SuccessCount from '../Shared/SuceessCount';
 import PremiumMembersSection from '../Shared/PremiumMembers';
 import PrivateRoute from "./../../routes/PrivateRoute"
 import Newsletter from '../Shared/Newsletter';
+import BlogSection from '../Shared/Blog';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                 <PremiumMembersSection></PremiumMembersSection>
             </PrivateRoute>
             <HowItWorks></HowItWorks>
+            <BlogSection></BlogSection>
             <SuccessCount></SuccessCount>
             <SuccessStories></SuccessStories>
             <Newsletter></Newsletter>
